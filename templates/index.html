@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Q&A Assistant</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <h1>Document Q&A Assistant</h1>
+        <p>Upload a PDF or TXT file and ask questions about its content.</p>
+
+        <section class="card">
+            <form method="POST" enctype="multipart/form-data">
+                <h2>1. Upload your document</h2>
+                <input
+                    type="file"
+                    name="pdf"
+                    accept=".pdf,.txt"
+                    required
+                >
+
+                <h2>2. Ask a question</h2>
+                <input
+                    type="text"
+                    name="question"
+                    placeholder="e.g., Explain virtual memory"
+                    required
+                >
+
+                <button type="submit">Ask Question</button>
+            </form>
+
+            <div class="answer">
+                <h2>Answer</h2>
+                <p>{{ answer or "Your answer will appear here." }}</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
