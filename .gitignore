@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+.venv312/
+venv/
+env/
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+# Uploaded/private documents
+uploads/
+documents/
+*.pdf
+*.txt
+!requirements.txt
+
+# Generated vector indexes and model artifacts
+*.faiss
+*.pkl
+*.pickle
+*.index
+models/
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
