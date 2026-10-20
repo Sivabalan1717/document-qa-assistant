@@ -1,0 +1,7 @@
+Flask
+pypdf
+langchain-text-splitters
+sentence-transformers
+faiss-cpu
+numpy
+requests
